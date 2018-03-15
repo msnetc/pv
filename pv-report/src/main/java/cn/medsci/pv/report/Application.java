@@ -6,6 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import sun.util.logging.resources.logging;
 
 /**
@@ -14,6 +15,7 @@ import sun.util.logging.resources.logging;
  */
 @EnableTransactionManagement
 @SpringBootApplication
+@EnableSwagger2
 public class Application {
 
     protected final static Logger logger = LoggerFactory.getLogger(Application.class);
@@ -23,7 +25,8 @@ public class Application {
         app.setBannerMode(Banner.Mode.OFF);
         app.run(args);
         logger.info("PortalApplication is success!");
-        System.err.println("sample started. http://localhost:8080/druid/api.html");
+        System.err.println("druid数据状态监控：http://localhost:8080/druid/api.html");
+        System.err.println("swaggerApi：http://localhost:8080/swagger-ui.html");
     }
 
 }

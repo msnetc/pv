@@ -9,6 +9,8 @@ import cn.medsci.pv.report.service.IUserService;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.plugins.Page;
 import com.baomidou.mybatisplus.plugins.pagination.PageHelper;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,6 +26,7 @@ import com.alibaba.fastjson.JSONObject;
  * /mybatis-plus/src/test/java/com/baomidou/mybatisplus/test/generator/MysqlGenerator.java
  */
 @RestController
+@Api(value = "用户操作控制器")
 @RequestMapping("/user")
 public class UserController {
 
@@ -33,6 +36,7 @@ public class UserController {
     /**
      * 分页 PAGE
      */
+    @ApiOperation(value="分页PAGE", notes="根据url来获取所有用户信息")
     @GetMapping("/test")
     public Page<User> test() {
         return userService.selectPage(new Page<User>(0, 12));
@@ -41,6 +45,7 @@ public class UserController {
     /**
      * AR 部分测试
      */
+    @ApiOperation(value="删除user", notes="根据url来删除用户信息")
     @GetMapping("/test1")
     public Page<User> test1() {
         User user = new User("testAr", AgeEnum.ONE, 1);
@@ -58,6 +63,7 @@ public class UserController {
     /**
      * 增删改查 CRUD
      */
+    @ApiOperation(value="增删改查user", notes="根据url增删改查user")
     @GetMapping("/test2")
     public User test2() {
         System.err.println("删除一条数据：" + userService.deleteById(1L));
@@ -81,6 +87,7 @@ public class UserController {
     /**
      * 插入 OR 修改
      */
+    @ApiOperation(value="插入 OR 修改user", notes="插入 OR 修改user")
     @GetMapping("/test3")
     public User test3() {
         User user = new User(1L, "王五", AgeEnum.ONE, 1);
@@ -93,6 +100,8 @@ public class UserController {
     /**
      * 测试实体注解注入条件 LIKE 查询
      */
+    @ApiOperation(value="条件 LIKE 查询", notes="条件 LIKE 查询")
+    //@ApiImplicitParam(name = "id", value = "用户ID", required = true, dataType = "Long", paramType = "path")
     @GetMapping("/like")
     public Object like() {
         JSONObject result = new JSONObject();
@@ -102,58 +111,58 @@ public class UserController {
         return result;
     }
 
-    @GetMapping("/add")
-    public Object addUser() {
-        User user = new User("张三'特殊`符号", AgeEnum.TWO, 1);
-        user.setPhone(PhoneEnum.CUCC);
-        JSONObject result = new JSONObject();
-        result.put("result", userService.insert(user));
-        return result;
-    }
-
-    @GetMapping("/selectsql")
-    public Object getUserBySql() {
-        JSONObject result = new JSONObject();
-        result.put("records", userService.selectListBySQL());
-        return result;
-    }
-
-    /**
-     * 7、分页 size 一页显示数量  current 当前页码
-     * 方式一：http://localhost:8080/user/page?size=1&current=1<br>
-     * 方式二：http://localhost:8080/user/pagehelper?size=1&current=1<br>
-     */
-
-    // 参数模式分页
-    @GetMapping("/page")
-    public Object page(Page page) {
-        return userService.selectPage(page);
-    }
-
-    // ThreadLocal 模式分页
-    @GetMapping("/pagehelper")
-    public Object pagehelper(Page page) {
-        PageHelper.setPagination(page);
-        page.setRecords(userService.selectList(null));
-        page.setTotal(PageHelper.freeTotal());//获取总数并释放资源 也可以 PageHelper.getTotal()
-        return page;
-    }
-
-
-    /**
-     * 测试事物
-     * http://localhost:8080/user/test_transactional<br>
-     * 访问如下并未发现插入数据说明事物可靠！！<br>
-     * http://localhost:8080/user/test<br>
-     * <br>
-     * 启动  Application 加上 @EnableTransactionManagement 注解其实可无默认貌似就开启了<br>
-     * 需要事物的方法加上 @Transactional 必须的哦！！
-     */
-    @Transactional
-    @GetMapping("/test_transactional")
-    public void testTransactional() {
-        userService.insert(new User(1000L, "测试事物", AgeEnum.ONE, 3));
-        System.out.println(" 这里手动抛出异常，自动回滚数据");
-        throw new RuntimeException();
-    }
+//    @GetMapping("/add")
+//    public Object addUser() {
+//        User user = new User("张三'特殊`符号", AgeEnum.TWO, 1);
+//        user.setPhone(PhoneEnum.CUCC);
+//        JSONObject result = new JSONObject();
+//        result.put("result", userService.insert(user));
+//        return result;
+//    }
+//
+//    @GetMapping("/selectsql")
+//    public Object getUserBySql() {
+//        JSONObject result = new JSONObject();
+//        result.put("records", userService.selectListBySQL());
+//        return result;
+//    }
+//
+//    /**
+//     * 7、分页 size 一页显示数量  current 当前页码
+//     * 方式一：http://localhost:8080/user/page?size=1&current=1<br>
+//     * 方式二：http://localhost:8080/user/pagehelper?size=1&current=1<br>
+//     */
+//
+//    // 参数模式分页
+//    @GetMapping("/page")
+//    public Object page(Page page) {
+//        return userService.selectPage(page);
+//    }
+//
+//    // ThreadLocal 模式分页
+//    @GetMapping("/pagehelper")
+//    public Object pagehelper(Page page) {
+//        PageHelper.setPagination(page);
+//        page.setRecords(userService.selectList(null));
+//        page.setTotal(PageHelper.freeTotal());//获取总数并释放资源 也可以 PageHelper.getTotal()
+//        return page;
+//    }
+//
+//
+//    /**
+//     * 测试事物
+//     * http://localhost:8080/user/test_transactional<br>
+//     * 访问如下并未发现插入数据说明事物可靠！！<br>
+//     * http://localhost:8080/user/test<br>
+//     * <br>
+//     * 启动  Application 加上 @EnableTransactionManagement 注解其实可无默认貌似就开启了<br>
+//     * 需要事物的方法加上 @Transactional 必须的哦！！
+//     */
+//    @Transactional
+//    @GetMapping("/test_transactional")
+//    public void testTransactional() {
+//        userService.insert(new User(1000L, "测试事物", AgeEnum.ONE, 3));
+//        System.out.println(" 这里手动抛出异常，自动回滚数据");
+//        throw new RuntimeException();
+//    }
 }
