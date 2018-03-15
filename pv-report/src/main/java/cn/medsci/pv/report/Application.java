@@ -36,7 +36,6 @@ public class Application {
      * </p>
      */
     public static void main(String[] args) {
-
         SpringApplication app = new SpringApplication(Application.class);
         app.setBannerMode(Banner.Mode.OFF);
         app.run(args);
