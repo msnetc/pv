@@ -1,9 +1,9 @@
-package cn.medsci.pv.report.mapper;
+package cn.medsci.pv.report.vo.report;
 
 import java.util.List;
 
 import cn.medsci.pv.report.SuperMapper;
-import cn.medsci.pv.report.entity.User;
+import cn.medsci.pv.report.vo.report.User;
 import org.apache.ibatis.annotations.Select;
 
 /**

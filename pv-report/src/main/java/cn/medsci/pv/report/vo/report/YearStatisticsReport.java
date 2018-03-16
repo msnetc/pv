@@ -1,4 +1,4 @@
-package cn.medsci.pv.report.entity.report;
+package cn.medsci.pv.report.vo.report;
 
 import io.swagger.annotations.ApiModelProperty;
 

@@ -1,10 +1,7 @@
-package cn.medsci.pv.report.entity;
+package cn.medsci.pv.report.vo.report;
 
 import java.util.Date;
 
-import cn.medsci.pv.report.entity.SuperEntity;
-import cn.medsci.pv.report.entity.enums.AgeEnum;
-import cn.medsci.pv.report.entity.enums.PhoneEnum;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableLogic;
 import com.baomidou.mybatisplus.mapper.SqlCondition;

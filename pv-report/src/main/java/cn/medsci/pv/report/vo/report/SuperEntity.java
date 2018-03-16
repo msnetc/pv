@@ -1,4 +1,4 @@
-package cn.medsci.pv.report.entity;
+package cn.medsci.pv.report.vo.report;
 
 import java.io.Serializable;
 

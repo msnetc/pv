@@ -1,7 +1,7 @@
 package cn.medsci.pv.report.controller;
 
-import cn.medsci.pv.report.entity.report.GetYearStatisticsReport;
-import cn.medsci.pv.report.entity.report.YearStatisticsReport;
+import cn.medsci.pv.report.vo.report.GetYearStatisticsReport;
+import cn.medsci.pv.report.vo.report.YearStatisticsReport;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
