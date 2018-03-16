@@ -1,9 +1,9 @@
 package cn.medsci.pv.report.entity.report;
 
-import com.sun.tools.javac.util.List;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.util.Date;
+import java.util.List;
 
 public class GetRegionReport {
 
@@ -17,11 +17,10 @@ public class GetRegionReport {
     private Date endDate;
 
     @ApiModelProperty(value = "商品名列表")
-    private List<String>   productNames;
+    private List<String> productNames;
 
     @ApiModelProperty(value = "报告状态id  1已完成 2未完成")
     private Integer reportStatusId;
-
 
     public Integer getDateCategoryId() {
         return dateCategoryId;
