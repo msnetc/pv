@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.medsci.pv.report.mapper.ReportLogisticsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.medsci.pv.report.entity.ReportLogistics">
+        <id column="id" property="id" />
+        <result column="company_id" property="companyId" />
+        <result column="report_id" property="reportId" />
+        <result column="report_number" property="reportNumber" />
+        <result column="waybill_number" property="waybillNumber" />
+        <result column="department" property="department" />
+        <result column="logistics_company" property="logisticsCompany" />
+        <result column="short_name" property="shortName" />
+        <result column="reported_way" property="reportedWay" />
+        <result column="logistics_info" property="logisticsInfo" />
+        <result column="reported_date" property="reportedDate" />
+        <result column="remark" property="remark" />
+        <result column="logistics_status" property="logisticsStatus" />
+        <result column="status" property="status" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, company_id AS companyId, report_id AS reportId, report_number AS reportNumber, waybill_number AS waybillNumber, department, logistics_company AS logisticsCompany, short_name AS shortName, reported_way AS reportedWay, logistics_info AS logisticsInfo, reported_date AS reportedDate, remark, logistics_status AS logisticsStatus, status, created_at AS createdAt, updated_at AS updatedAt
+    </sql>
+
+</mapper>

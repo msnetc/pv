@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.medsci.pv.report.mapper.DrugAdverseReactionsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.medsci.pv.report.entity.DrugAdverseReactions">
+        <id column="id" property="id" />
+        <result column="drug_id" property="drugId" />
+        <result column="number" property="number" />
+        <result column="meddra" property="meddra" />
+        <result column="title" property="title" />
+        <result column="first_nick" property="firstNick" />
+        <result column="first_nick_code" property="firstNickCode" />
+        <result column="incidence" property="incidence" />
+        <result column="remark" property="remark" />
+        <result column="status" property="status" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, drug_id AS drugId, number, meddra, title, first_nick AS firstNick, first_nick_code AS firstNickCode, incidence, remark, status, created_at AS createdAt, updated_at AS updatedAt
+    </sql>
+
+</mapper>

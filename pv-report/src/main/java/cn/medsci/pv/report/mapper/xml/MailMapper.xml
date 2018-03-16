@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.medsci.pv.report.mapper.MailMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.medsci.pv.report.entity.Mail">
+        <id column="id" property="id" />
+        <result column="service_type" property="serviceType" />
+        <result column="mail_account" property="mailAccount" />
+        <result column="mail_password" property="mailPassword" />
+        <result column="company_id" property="companyId" />
+        <result column="server" property="server" />
+        <result column="port" property="port" />
+        <result column="ssl_crypt" property="sslCrypt" />
+        <result column="status" property="status" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, service_type AS serviceType, mail_account AS mailAccount, mail_password AS mailPassword, company_id AS companyId, server, port, ssl_crypt AS sslCrypt, status, created_at AS createdAt, updated_at AS updatedAt
+    </sql>
+
+</mapper>

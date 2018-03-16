@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.medsci.pv.report.mapper.ReportMainpageMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.medsci.pv.report.entity.ReportMainpage">
+        <id column="id" property="id" />
+        <result column="regulation_id" property="regulationId" />
+        <result column="user_id" property="userId" />
+        <result column="first_report_id" property="firstReportId" />
+        <result column="is_first_report" property="isFirstReport" />
+        <result column="is_last_report" property="isLastReport" />
+        <result column="report_first_received_date" property="reportFirstReceivedDate" />
+        <result column="report_drug_safety_date" property="reportDrugSafetyDate" />
+        <result column="aecountry_id" property="aecountryId" />
+        <result column="ae_country" property="aeCountry" />
+        <result column="received_fromid_id" property="receivedFromidId" />
+        <result column="received_from_id" property="receivedFromId" />
+        <result column="research_id" property="researchId" />
+        <result column="scheme_num" property="schemeNum" />
+        <result column="center_number" property="centerNumber" />
+        <result column="delayed_reason" property="delayedReason" />
+        <result column="brand_name" property="brandName" />
+        <result column="first_brand_name" property="firstBrandName" />
+        <result column="drug_name" property="drugName" />
+        <result column="first_drug_name" property="firstDrugName" />
+        <result column="first_generic_name" property="firstGenericName" />
+        <result column="first_event_term" property="firstEventTerm" />
+        <result column="generic_name" property="genericName" />
+        <result column="event_term" property="eventTerm" />
+        <result column="event_of_onset" property="eventOfOnset" />
+        <result column="report_identifier" property="reportIdentifier" />
+        <result column="report_identifier_status" property="reportIdentifierStatus" />
+        <result column="report_type" property="reportType" />
+        <result column="reporter_name" property="reporterName" />
+        <result column="reporter_organisation" property="reporterOrganisation" />
+        <result column="reporter_department" property="reporterDepartment" />
+        <result column="reporter_country" property="reporterCountry" />
+        <result column="reporter_country_id" property="reporterCountryId" />
+        <result column="reporter_stateor_province" property="reporterStateorProvince" />
+        <result column="reporter_city" property="reporterCity" />
+        <result column="reporter_post" property="reporterPost" />
+        <result column="reporter_telephone_number" property="reporterTelephoneNumber" />
+        <result column="patient_name" property="patientName" />
+        <result column="subject_number" property="subjectNumber" />
+        <result column="date_of_birth" property="dateOfBirth" />
+        <result column="age" property="age" />
+        <result column="age_at_time_of_onset_unit" property="ageAtTimeOfOnsetUnit" />
+        <result column="sex" property="sex" />
+        <result column="patient_contact_information" property="patientContactInformation" />
+        <result column="literature_published_year" property="literaturePublishedYear" />
+        <result column="literature_author" property="literatureAuthor" />
+        <result column="literature_published_journals" property="literaturePublishedJournals" />
+        <result column="role_organize_status" property="roleOrganizeStatus" />
+        <result column="literature_title" property="literatureTitle" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+        <result column="time_begin" property="timeBegin" />
+        <result column="severity" property="severity" />
+        <result column="company_id" property="companyId" />
+        <result column="delete_status" property="deleteStatus" />
+        <result column="time_end" property="timeEnd" />
+        <result column="create_version_cause" property="createVersionCause" />
+        <result column="source_id" property="sourceId" />
+        <result column="seriousness" property="seriousness" />
+        <result column="reported_status" property="reportedStatus" />
+        <result column="adr_code" property="adrCode" />
+        <result column="reported_date" property="reportedDate" />
+        <result column="type" property="type" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, regulation_id AS regulationId, user_id AS userId, first_report_id AS firstReportId, is_first_report AS isFirstReport, is_last_report AS isLastReport, report_first_received_date AS reportFirstReceivedDate, report_drug_safety_date AS reportDrugSafetyDate, aecountry_id AS aecountryId, ae_country AS aeCountry, received_fromid_id AS receivedFromidId, received_from_id AS receivedFromId, research_id AS researchId, scheme_num AS schemeNum, center_number AS centerNumber, delayed_reason AS delayedReason, brand_name AS brandName, first_brand_name AS firstBrandName, drug_name AS drugName, first_drug_name AS firstDrugName, first_generic_name AS firstGenericName, first_event_term AS firstEventTerm, generic_name AS genericName, event_term AS eventTerm, event_of_onset AS eventOfOnset, report_identifier AS reportIdentifier, report_identifier_status AS reportIdentifierStatus, report_type AS reportType, reporter_name AS reporterName, reporter_organisation AS reporterOrganisation, reporter_department AS reporterDepartment, reporter_country AS reporterCountry, reporter_country_id AS reporterCountryId, reporter_stateor_province AS reporterStateorProvince, reporter_city AS reporterCity, reporter_post AS reporterPost, reporter_telephone_number AS reporterTelephoneNumber, patient_name AS patientName, subject_number AS subjectNumber, date_of_birth AS dateOfBirth, age, age_at_time_of_onset_unit AS ageAtTimeOfOnsetUnit, sex, patient_contact_information AS patientContactInformation, literature_published_year AS literaturePublishedYear, literature_author AS literatureAuthor, literature_published_journals AS literaturePublishedJournals, role_organize_status AS roleOrganizeStatus, literature_title AS literatureTitle, created_at AS createdAt, updated_at AS updatedAt, time_begin AS timeBegin, severity, company_id AS companyId, delete_status AS deleteStatus, time_end AS timeEnd, create_version_cause AS createVersionCause, source_id AS sourceId, seriousness, reported_status AS reportedStatus, adr_code AS adrCode, reported_date AS reportedDate, type
+    </sql>
+
+</mapper>

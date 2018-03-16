@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.medsci.pv.report.mapper.ReportTasksMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.medsci.pv.report.entity.ReportTasks">
+        <id column="id" property="id" />
+        <result column="company_id" property="companyId" />
+        <result column="report_id" property="reportId" />
+        <result column="report_identify" property="reportIdentify" />
+        <result column="report_first_received_date" property="reportFirstReceivedDate" />
+        <result column="assigned_at" property="assignedAt" />
+        <result column="drug_name" property="drugName" />
+        <result column="first_drug_name" property="firstDrugName" />
+        <result column="event_term" property="eventTerm" />
+        <result column="first_event_term" property="firstEventTerm" />
+        <result column="seriousness" property="seriousness" />
+        <result column="standard_of_seriousness" property="standardOfSeriousness" />
+        <result column="case_causality" property="caseCausality" />
+        <result column="report_cate" property="reportCate" />
+        <result column="task_user_id" property="taskUserId" />
+        <result column="task_user_name" property="taskUserName" />
+        <result column="organize_role_id" property="organizeRoleId" />
+        <result column="organize_role_name" property="organizeRoleName" />
+        <result column="received_from_id" property="receivedFromId" />
+        <result column="status" property="status" />
+        <result column="source_id" property="sourceId" />
+        <result column="task_countdown" property="taskCountdown" />
+        <result column="report_countdown" property="reportCountdown" />
+        <result column="regulation_id" property="regulationId" />
+        <result column="data_insert_countdown" property="dataInsertCountdown" />
+        <result column="data_qc_countdown" property="dataQcCountdown" />
+        <result column="medical_exam_countdown" property="medicalExamCountdown" />
+        <result column="medical_exam_qc_countdown" property="medicalExamQcCountdown" />
+        <result column="report_submit_countdown" property="reportSubmitCountdown" />
+        <result column="report_complete_countdown" property="reportCompleteCountdown" />
+        <result column="countdown_unit" property="countdownUnit" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+        <result column="deleted_at" property="deletedAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, company_id AS companyId, report_id AS reportId, report_identify AS reportIdentify, report_first_received_date AS reportFirstReceivedDate, assigned_at AS assignedAt, drug_name AS drugName, first_drug_name AS firstDrugName, event_term AS eventTerm, first_event_term AS firstEventTerm, seriousness, standard_of_seriousness AS standardOfSeriousness, case_causality AS caseCausality, report_cate AS reportCate, task_user_id AS taskUserId, task_user_name AS taskUserName, organize_role_id AS organizeRoleId, organize_role_name AS organizeRoleName, received_from_id AS receivedFromId, status, source_id AS sourceId, task_countdown AS taskCountdown, report_countdown AS reportCountdown, regulation_id AS regulationId, data_insert_countdown AS dataInsertCountdown, data_qc_countdown AS dataQcCountdown, medical_exam_countdown AS medicalExamCountdown, medical_exam_qc_countdown AS medicalExamQcCountdown, report_submit_countdown AS reportSubmitCountdown, report_complete_countdown AS reportCompleteCountdown, countdown_unit AS countdownUnit, created_at AS createdAt, updated_at AS updatedAt, deleted_at AS deletedAt
+    </sql>
+
+</mapper>

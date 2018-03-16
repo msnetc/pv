@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.medsci.pv.report.mapper.ReportValuesMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.medsci.pv.report.entity.ReportValues">
+        <id column="id" property="id" />
+        <result column="company_id" property="companyId" />
+        <result column="report_id" property="reportId" />
+        <result column="report_tab_id" property="reportTabId" />
+        <result column="col" property="col" />
+        <result column="col_name" property="colName" />
+        <result column="name" property="name" />
+        <result column="description" property="description" />
+        <result column="value" property="value" />
+        <result column="is_table" property="isTable" />
+        <result column="table_alias" property="tableAlias" />
+        <result column="table_row_id" property="tableRowId" />
+        <result column="deleted_at" property="deletedAt" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, company_id AS companyId, report_id AS reportId, report_tab_id AS reportTabId, col, col_name AS colName, name, description, value, is_table AS isTable, table_alias AS tableAlias, table_row_id AS tableRowId, deleted_at AS deletedAt, created_at AS createdAt, updated_at AS updatedAt
+    </sql>
+
+</mapper>

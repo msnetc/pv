@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.medsci.pv.report.mapper.RegulationsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.medsci.pv.report.entity.Regulations">
+        <id column="id" property="id" />
+        <result column="company_id" property="companyId" />
+        <result column="title" property="title" />
+        <result column="severity" property="severity" />
+        <result column="priority" property="priority" />
+        <result column="finished_date" property="finishedDate" />
+        <result column="data_insert" property="dataInsert" />
+        <result column="data_qc" property="dataQc" />
+        <result column="medical_exam" property="medicalExam" />
+        <result column="medical_exam_qc" property="medicalExamQc" />
+        <result column="report_submit" property="reportSubmit" />
+        <result column="status" property="status" />
+        <result column="source_id" property="sourceId" />
+        <result column="unit" property="unit" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, company_id AS companyId, title, severity, priority, finished_date AS finishedDate, data_insert AS dataInsert, data_qc AS dataQc, medical_exam AS medicalExam, medical_exam_qc AS medicalExamQc, report_submit AS reportSubmit, status, source_id AS sourceId, unit, created_at AS createdAt, updated_at AS updatedAt
+    </sql>
+
+</mapper>

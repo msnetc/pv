@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.medsci.pv.report.mapper.DrugMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.medsci.pv.report.entity.Drug">
+        <id column="drug_id" property="drugId" />
+        <result column="type" property="type" />
+        <result column="company_id" property="companyId" />
+        <result column="common_en_name" property="commonEnName" />
+        <result column="common_zh_name" property="commonZhName" />
+        <result column="common_standard_name" property="commonStandardName" />
+        <result column="active_ingredients" property="activeIngredients" />
+        <result column="drug_class" property="drugClass" />
+        <result column="manufacturer" property="manufacturer" />
+        <result column="formulation" property="formulation" />
+        <result column="approval_number" property="approvalNumber" />
+        <result column="product_en_name" property="productEnName" />
+        <result column="product_zh_name" property="productZhName" />
+        <result column="is_import" property="isImport" />
+        <result column="specification" property="specification" />
+        <result column="dosage" property="dosage" />
+        <result column="indications" property="indications" />
+        <result column="reg_approval_date" property="regApprovalDate" />
+        <result column="first_sale_date" property="firstSaleDate" />
+        <result column="replacement_date" property="replacementDate" />
+        <result column="medication_way" property="medicationWay" />
+        <result column="treatment_person" property="treatmentPerson" />
+        <result column="pinyin" property="pinyin" />
+        <result column="chemical_name" property="chemicalName" />
+        <result column="molecular_formula" property="molecularFormula" />
+        <result column="molecular_weight" property="molecularWeight" />
+        <result column="trait" property="trait" />
+        <result column="approval_end_date" property="approvalEndDate" />
+        <result column="country" property="country" />
+        <result column="production_batch" property="productionBatch" />
+        <result column="production_quantity" property="productionQuantity" />
+        <result column="sales" property="sales" />
+        <result column="sales_zone" property="salesZone" />
+        <result column="recall_num" property="recallNum" />
+        <result column="real_recall_num" property="realRecallNum" />
+        <result column="adverse_reactions" property="adverseReactions" />
+        <result column="base_drug" property="baseDrug" />
+        <result column="medical_insurance_drug" property="medicalInsuranceDrug" />
+        <result column="non_prescription_drug" property="nonPrescriptionDrug" />
+        <result column="chinese_medicine_protection_varieties" property="chineseMedicineProtectionVarieties" />
+        <result column="reg_date" property="regDate" />
+        <result column="international_birth_day" property="internationalBirthDay" />
+        <result column="first_reg_date" property="firstRegDate" />
+        <result column="drug_testing_deadline" property="drugTestingDeadline" />
+        <result column="first_reg_date_again" property="firstRegDateAgain" />
+        <result column="status" property="status" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        drug_id AS drugId, type, company_id AS companyId, common_en_name AS commonEnName, common_zh_name AS commonZhName, common_standard_name AS commonStandardName, active_ingredients AS activeIngredients, drug_class AS drugClass, manufacturer, formulation, approval_number AS approvalNumber, product_en_name AS productEnName, product_zh_name AS productZhName, is_import AS isImport, specification, dosage, indications, reg_approval_date AS regApprovalDate, first_sale_date AS firstSaleDate, replacement_date AS replacementDate, medication_way AS medicationWay, treatment_person AS treatmentPerson, pinyin, chemical_name AS chemicalName, molecular_formula AS molecularFormula, molecular_weight AS molecularWeight, trait, approval_end_date AS approvalEndDate, country, production_batch AS productionBatch, production_quantity AS productionQuantity, sales, sales_zone AS salesZone, recall_num AS recallNum, real_recall_num AS realRecallNum, adverse_reactions AS adverseReactions, base_drug AS baseDrug, medical_insurance_drug AS medicalInsuranceDrug, non_prescription_drug AS nonPrescriptionDrug, chinese_medicine_protection_varieties AS chineseMedicineProtectionVarieties, reg_date AS regDate, international_birth_day AS internationalBirthDay, first_reg_date AS firstRegDate, drug_testing_deadline AS drugTestingDeadline, first_reg_date_again AS firstRegDateAgain, status, created_at AS createdAt, updated_at AS updatedAt
+    </sql>
+
+</mapper>

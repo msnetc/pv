@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.medsci.pv.report.mapper.FailedJobsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.medsci.pv.report.entity.FailedJobs">
+        <id column="id" property="id" />
+        <result column="connection" property="connection" />
+        <result column="queue" property="queue" />
+        <result column="payload" property="payload" />
+        <result column="exception" property="exception" />
+        <result column="failed_at" property="failedAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, connection, queue, payload, exception, failed_at AS failedAt
+    </sql>
+
+</mapper>

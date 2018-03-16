@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.medsci.pv.report.mapper.UsersMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.medsci.pv.report.entity.Users">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="truename" property="truename" />
+        <result column="sex" property="sex" />
+        <result column="mobile" property="mobile" />
+        <result column="email" property="email" />
+        <result column="is_check_email" property="isCheckEmail" />
+        <result column="company_id" property="companyId" />
+        <result column="company_name" property="companyName" />
+        <result column="notes" property="notes" />
+        <result column="password" property="password" />
+        <result column="status" property="status" />
+        <result column="remember_token" property="rememberToken" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+        <result column="deleted_at" property="deletedAt" />
+        <result column="verification_token" property="verificationToken" />
+        <result column="verification_token_expire" property="verificationTokenExpire" />
+        <result column="last_session" property="lastSession" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name, truename, sex, mobile, email, is_check_email AS isCheckEmail, company_id AS companyId, company_name AS companyName, notes, password, status, remember_token AS rememberToken, created_at AS createdAt, updated_at AS updatedAt, deleted_at AS deletedAt, verification_token AS verificationToken, verification_token_expire AS verificationTokenExpire, last_session AS lastSession
+    </sql>
+
+</mapper>

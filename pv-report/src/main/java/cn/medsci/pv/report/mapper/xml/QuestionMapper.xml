@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.medsci.pv.report.mapper.QuestionMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.medsci.pv.report.entity.Question">
+        <id column="id" property="id" />
+        <result column="question_num" property="questionNum" />
+        <result column="report_num" property="reportNum" />
+        <result column="operation_userId" property="operationUserid" />
+        <result column="operation_name" property="operationName" />
+        <result column="operation_id" property="operationId" />
+        <result column="status" property="status" />
+        <result column="operation_date" property="operationDate" />
+        <result column="content" property="content" />
+        <result column="end_date" property="endDate" />
+        <result column="sending" property="sending" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+        <result column="sort" property="sort" />
+        <result column="question_parent" property="questionParent" />
+        <result column="company_id" property="companyId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, question_num AS questionNum, report_num AS reportNum, operation_userId AS operationUserid, operation_name AS operationName, operation_id AS operationId, status, operation_date AS operationDate, content, end_date AS endDate, sending, created_at AS createdAt, updated_at AS updatedAt, sort, question_parent AS questionParent, company_id AS companyId
+    </sql>
+
+</mapper>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.medsci.pv.report.mapper.DictionariesMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.medsci.pv.report.entity.Dictionaries">
+        <id column="id" property="id" />
+        <result column="serial" property="serial" />
+        <result column="chinese" property="chinese" />
+        <result column="english" property="english" />
+        <result column="forpage" property="forpage" />
+        <result column="structure" property="structure" />
+        <result column="sort" property="sort" />
+        <result column="dict_id" property="dictId" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, serial, chinese, english, forpage, structure, sort, dict_id AS dictId, created_at AS createdAt, updated_at AS updatedAt
+    </sql>
+
+</mapper>

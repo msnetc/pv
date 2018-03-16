@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.medsci.pv.report.mapper.WorkflowNodesMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.medsci.pv.report.entity.WorkflowNodes">
+        <id column="id" property="id" />
+        <result column="company_id" property="companyId" />
+        <result column="workflow_id" property="workflowId" />
+        <result column="name" property="name" />
+        <result column="en_name" property="enName" />
+        <result column="is_message_notice" property="isMessageNotice" />
+        <result column="is_email_notice" property="isEmailNotice" />
+        <result column="organize_role_id" property="organizeRoleId" />
+        <result column="role_id" property="roleId" />
+        <result column="rule" property="rule" />
+        <result column="description" property="description" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+        <result column="sort" property="sort" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, company_id AS companyId, workflow_id AS workflowId, name, en_name AS enName, is_message_notice AS isMessageNotice, is_email_notice AS isEmailNotice, organize_role_id AS organizeRoleId, role_id AS roleId, rule, description, created_at AS createdAt, updated_at AS updatedAt, sort
+    </sql>
+
+</mapper>

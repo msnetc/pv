@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.medsci.pv.report.mapper.ClinicalMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.medsci.pv.report.entity.Clinical">
+        <id column="id" property="id" />
+        <result column="research_id" property="researchId" />
+        <result column="research_topic" property="researchTopic" />
+        <result column="study_drug_use" property="studyDrugUse" />
+        <result column="bid" property="bid" />
+        <result column="bid_id" property="bidId" />
+        <result column="research_type_id" property="researchTypeId" />
+        <result column="research_type" property="researchType" />
+        <result column="subdivision" property="subdivision" />
+        <result column="subdivision_id" property="subdivisionId" />
+        <result column="indication" property="indication" />
+        <result column="research_comments" property="researchComments" />
+        <result column="research_design" property="researchDesign" />
+        <result column="start_time" property="startTime" />
+        <result column="end_time" property="endTime" />
+        <result column="product_classification" property="productClassification" />
+        <result column="product_classification_id" property="productClassificationId" />
+        <result column="registration_classification" property="registrationClassification" />
+        <result column="delete_status" property="deleteStatus" />
+        <result column="enterprise_name" property="enterpriseName" />
+        <result column="enterprise_id" property="enterpriseId" />
+        <result column="drug_id" property="drugId" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+        <result column="company_id" property="companyId" />
+        <result column="sort_id" property="sortId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, research_id AS researchId, research_topic AS researchTopic, study_drug_use AS studyDrugUse, bid, bid_id AS bidId, research_type_id AS researchTypeId, research_type AS researchType, subdivision, subdivision_id AS subdivisionId, indication, research_comments AS researchComments, research_design AS researchDesign, start_time AS startTime, end_time AS endTime, product_classification AS productClassification, product_classification_id AS productClassificationId, registration_classification AS registrationClassification, delete_status AS deleteStatus, enterprise_name AS enterpriseName, enterprise_id AS enterpriseId, drug_id AS drugId, created_at AS createdAt, updated_at AS updatedAt, company_id AS companyId, sort_id AS sortId
+    </sql>
+
+</mapper>

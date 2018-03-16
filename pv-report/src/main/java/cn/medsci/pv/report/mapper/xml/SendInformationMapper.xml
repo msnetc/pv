@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.medsci.pv.report.mapper.SendInformationMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.medsci.pv.report.entity.SendInformation">
+        <id column="id" property="id" />
+        <result column="question_id" property="questionId" />
+        <result column="end_date" property="endDate" />
+        <result column="status" property="status" />
+        <result column="content" property="content" />
+        <result column="sending" property="sending" />
+        <result column="email" property="email" />
+        <result column="email_theme" property="emailTheme" />
+        <result column="phone_number" property="phoneNumber" />
+        <result column="express" property="express" />
+        <result column="ems_express" property="emsExpress" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+        <result column="deleted_at" property="deletedAt" />
+        <result column="company_id" property="companyId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, question_id AS questionId, end_date AS endDate, status, content, sending, email, email_theme AS emailTheme, phone_number AS phoneNumber, express, ems_express AS emsExpress, created_at AS createdAt, updated_at AS updatedAt, deleted_at AS deletedAt, company_id AS companyId
+    </sql>
+
+</mapper>

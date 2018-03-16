@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.medsci.pv.report.mapper.RecursiveRelationsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.medsci.pv.report.entity.RecursiveRelations">
+        <id column="current_id" property="currentId" />
+        <result column="recursive_id" property="recursiveId" />
+        <result column="recursive_type" property="recursiveType" />
+        <result column="sort" property="sort" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        current_id AS currentId, recursive_id AS recursiveId, recursive_type AS recursiveType, sort
+    </sql>
+
+</mapper>

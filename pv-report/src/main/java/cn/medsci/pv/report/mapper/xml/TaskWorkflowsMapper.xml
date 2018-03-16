@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.medsci.pv.report.mapper.TaskWorkflowsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.medsci.pv.report.entity.TaskWorkflows">
+        <id column="id" property="id" />
+        <result column="task_id" property="taskId" />
+        <result column="task_user_id" property="taskUserId" />
+        <result column="organize_role_id" property="organizeRoleId" />
+        <result column="desc" property="desc" />
+        <result column="back_desc" property="backDesc" />
+        <result column="assigned_at" property="assignedAt" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+        <result column="deleted_at" property="deletedAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, task_id AS taskId, task_user_id AS taskUserId, organize_role_id AS organizeRoleId, desc, back_desc AS backDesc, assigned_at AS assignedAt, created_at AS createdAt, updated_at AS updatedAt, deleted_at AS deletedAt
+    </sql>
+
+</mapper>
