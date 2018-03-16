@@ -1,7 +1,6 @@
 package cn.medsci.pv.report.controller;
 
-import cn.medsci.pv.report.vo.report.GetUntowardEffectReport;
-import cn.medsci.pv.report.vo.report.UntowardEffectReport;
+import cn.medsci.pv.report.entity.report.*;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -15,10 +14,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/MedicineEvent")
 public class MedicineEventReport {
 
-    @ApiOperation(value = "历年整体分布")
+    @ApiOperation(value = "不良反应结果")
     @RequestMapping(value = "/UntowardEffectReport", method = RequestMethod.POST)
     public UntowardEffectReport Index(@ApiParam("request") @RequestBody GetUntowardEffectReport request){
         UntowardEffectReport report1=new UntowardEffectReport();
         return  report1;
     }
+
+    @ApiOperation(value = "区域")
+    @RequestMapping(value = "/RegionReport", method = RequestMethod.POST)
+    public RegionReport Index(@ApiParam("request") @RequestBody GetRegionReport request){
+        RegionReport report1=new RegionReport();
+        return  report1;
+    }
+
 }
