@@ -34,6 +34,18 @@ spring:
           mergeSql: true
           slowSqlMillis: 5000
 
+#  redis:
+#    database: 0
+#    host: 127.0.0.1
+#    password: 123456
+#    port: 6379
+#    timeout: 0
+#    pool:
+#      max-idle: 100
+#      min-idle: 1
+#      max-active: 1000
+#      max-wait: -1
+
 # mybatis-plus 配置
 mybatis-plus:
   mapper-locations: classpath:/mapper/*Mapper.xml

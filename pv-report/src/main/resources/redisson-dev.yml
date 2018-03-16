@@ -1,0 +1,29 @@
+
+---
+sentinelServersConfig:
+  idleConnectionTimeout: 10000    #连接空闲超时
+  pingTimeout: 1000   # 执行失败最大次数
+  connectTimeout: 10000    #同任何节点建立连接时的等待超时
+  timeout: 3000      #等待节点回复命令的时间
+  retryAttempts: 3    #命令失败重试次数
+  retryInterval: 1500    #命令重试发送时间间隔
+  reconnectionTimeout: 3000   #重新连接时间间隔
+  failedAttempts: 3    #执行失败最大次数
+  password: 12345678  # 密码
+  subscriptionsPerConnection: 5   #单个连接最大订阅数量
+  clientName: null       #在Redis节点里显示的客户端名称。
+  loadBalancer: !<org.redisson.connection.balancer.RoundRobinLoadBalancer> {}   #负载均衡算法类的选择 轮询调度算法
+  slaveConnectionMinimumIdleSize: 32   #从节点最小空闲连接数
+  slaveConnectionPoolSize: 64    #从节点连接池大小
+  masterConnectionMinimumIdleSize: 32  #主节点最小空闲连接数
+  masterConnectionPoolSize: 64    #主节点连接池大小
+  readMode: "SLAVE"   #读取操作的负载均衡模式 默认值： SLAVE（只在从服务节点里读取）
+  sentinelAddresses:           #哨兵节点地址
+  - "redis://172.16.33.216:16001"
+  - "redis://172.16.33.216:16002"
+  masterName: "master1"   #主服务器的名称
+  database: 0  #数据库编号 默认是0
+threads: 0
+nettyThreads: 0
+codec: !<org.redisson.codec.JsonJacksonCodec> {}
+transportMode: NIO
